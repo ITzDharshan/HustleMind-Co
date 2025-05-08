@@ -1,0 +1,20 @@
+﻿HustleMind Co.
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\
+HustleMind_Co_
+none
+false
+TRACE;RELEASE;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\App.xaml
+111776050394
+1-799321880
+22-330989493
+219-1153103449
+ForgotWindow.xaml;MainWindow.xaml;MessagePopup.xaml;Pages\CustomerPage.xaml;Pages\DashboardPage.xaml;Pages\LoginPage.xaml;Pages\PaymentPage.xaml;Pages\ProjectPage.xaml;Pages\RegisterPage.xaml;Pages\ReviewPage.xaml;UserControls\SuccessPopup.xaml;
+
+False
+

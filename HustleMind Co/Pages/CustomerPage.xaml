@@ -1,0 +1,282 @@
+﻿<Page x:Class="HustleMind_Co_.Pages.CustomerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="CustomerPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Menu Panel -->
+        <StackPanel Grid.Column="0">
+            <StackPanel.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#FF7226FF" Offset="0"/>
+                    <GradientStop Color="#FF160078" Offset="0.65"/>
+                    <GradientStop Color="#FF010030" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+            <!-- Logo -->
+            <Image Height="120" Width="120" Source="/Assets/jet.png" Margin="0,20,0,10" HorizontalAlignment="Center"/>
+
+            <!-- Menu Items -->
+            <ListBox Background="Transparent" BorderThickness="0" Margin="0,30,0,0"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                 Foreground="White" FontSize="16"
+                 FontFamily="Poppins"
+                    SelectedItem="{Binding SelectedMenuItem}" 
+                 SelectionMode="Single">
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnDashboardClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Dashboard" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnCustomersClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE77B;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Customers" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnProjectsClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8B7;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Projects" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnPaymentsClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8C7;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Payments" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnReviewsClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE734;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Reviews" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <Border Height="120" Background="Transparent" />
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnLogoutClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Width="21">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8AC;" Margin="0,0,15,0" FontSize="20"/>
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
+        </StackPanel>
+
+        <ScrollViewer Grid.Column="1" Padding="20" VerticalScrollBarVisibility="Auto" Background="White" RenderTransformOrigin="0.572,0.523">
+            <StackPanel>
+
+                <!-- Title -->
+                <TextBlock Text="Add New Customer" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" FontFamily="Poppins" Foreground="#333"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Form Fields -->
+                    <Grid Width="568" HorizontalAlignment="Left" Margin="32,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Name -->
+                        <TextBlock Text="Name:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+
+                        <!-- Mobile -->
+                        <TextBlock Text="Mobile:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <TextBox x:Name="txtMobile" Grid.Row="1" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+
+                        <!-- Email -->
+                        <TextBlock Text="NIC Number:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <TextBox x:Name="txtNIC" Grid.Row="2" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+
+                        <!-- Address -->
+                        <TextBlock Text="Address:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <TextBox x:Name="txtAddress" Grid.Row="3" Grid.Column="1" Margin="0,10" Padding="10" Height="80" TextWrapping="Wrap" AcceptsReturn="True" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+
+                        <!-- Buttons -->
+                        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" Margin="0,20,0,0">
+                            <Button Content="Add Customer" Width="150" Height="35" Margin="0,0,20,0" 
+                                    Background="#4A90E2" Foreground="White" FontFamily="Poppins" 
+                                    BorderBrush="#357ABD" Click="AddCustomer_Click"/>
+
+                            <Button Content="Save Changes" Width="150" Height="35"
+                                    Background="#E74C3C" Foreground="White" FontFamily="Poppins" 
+                                    BorderBrush="#C0392B" Click="SaveChanges_Click"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Side Image -->
+                    <Image Source="/Assets/Business merger-amico.png" Width="300" Margin="20,0,0,0" Stretch="Uniform" Grid.Column="1"/>
+                </Grid>
+
+
+                <!-- Table Title -->
+                <TextBlock Text="Customer List" FontSize="24" FontWeight="Bold" Margin="0,20,0,20" FontFamily="Poppins" Foreground="#333"/>
+
+                <Border Background="White" 
+                    CornerRadius="12" 
+                    BorderBrush="#E5E7EB" 
+                    BorderThickness="1" 
+                    Padding="20"
+                    Margin="20"
+                    SnapsToDevicePixels="True">
+
+                    <DataGrid x:Name="CustomerDataGrid" 
+                          AutoGenerateColumns="False"
+                          HeadersVisibility="Column"
+                          CanUserAddRows="False"
+                          IsReadOnly="True"
+                          AlternatingRowBackground="#FAFAFA"
+                          GridLinesVisibility="None"
+                          RowHeight="60"
+                          ColumnHeaderHeight="50"
+                          FontFamily="Poppins"
+                          FontSize="14"
+                          BorderThickness="0"
+                          Background="White"
+                          Foreground="#374151"
+                          HorizontalGridLinesBrush="#E5E7EB"
+                          VerticalGridLinesBrush="#E5E7EB">
+
+                        <!-- Column header style -->
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#F9FAFB"/>
+                                <Setter Property="Foreground" Value="#111827"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontSize" Value="16"/>
+                                <Setter Property="BorderBrush" Value="#E5E7EB"/>
+                                <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                <Setter Property="Padding" Value="10,0"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+
+                        <!-- Cell Style (Inside Data) -->
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Foreground" Value="#111827"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="Padding" Value="10,0"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGrid.CellStyle>
+
+                        <!-- Columns -->
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Customer ID" Binding="{Binding CustomerId}" Width="120">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="200">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Header="Mobile" Binding="{Binding Mobile}" Width="150">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Header="NIC Number" Binding="{Binding NICNumber}" Width="220">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTemplateColumn Header="Address" Width="250">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <TextBlock Text="{Binding Address}" 
+                                                TextWrapping="Wrap"
+                                                TextTrimming="CharacterEllipsis"
+                                                FontFamily="Poppins"
+                                                FontSize="14" 
+                                                Foreground="#111827"
+                                                Padding="5,0"
+                                                Height="40" 
+                                                LineStackingStrategy="BlockLineHeight"
+                                                LineHeight="20"
+                                                TextAlignment="Left" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <!-- Action buttons -->
+                            <DataGridTemplateColumn Header="Actions" Width="120">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                <Button Width="32" Height="32" Margin="4" Background="#ECFDF5" BorderBrush="#34D399" BorderThickness="1" 
+                                                        Click="EditButton_Click" ToolTip="Edit">
+                                                    <Image Source="/Assets/pencil.png" Width="16" Height="16"/>
+                                                </Button>
+
+                                                <Button Width="32" Height="32" Margin="4" Background="#FEF2F2" BorderBrush="#F87171" BorderThickness="1"
+                                                        Click="DeleteButton_Click" ToolTip="Delete">
+                                                    <Image Source="/Assets/bin.png" Width="16" Height="16"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

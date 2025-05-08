@@ -1,0 +1,276 @@
+﻿<Page x:Class="HustleMind_Co_.Pages.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d"
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="DashboardPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Menu Panel -->
+        <StackPanel Grid.Column="0">
+            <StackPanel.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#FF7226FF" Offset="0"/>
+                    <GradientStop Color="#FF160078" Offset="0.65"/>
+                    <GradientStop Color="#FF010030" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+            <!-- Logo Image -->
+            <Image Height="120" Width="120" Source="/Assets/jet.png" Margin="0,20,0,10" HorizontalAlignment="Center"/>
+
+            <!-- Menu Items -->
+            <ListBox Background="Transparent" BorderThickness="0" Margin="0,30,0,0"
+     HorizontalAlignment="Stretch" VerticalAlignment="Top"
+     Foreground="White" FontSize="16"
+     FontFamily="Poppins"
+        SelectedItem="{Binding SelectedMenuItem}" 
+     SelectionMode="Single">
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnDashboardClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Dashboard" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnCustomersClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE77B;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Customers" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnProjectsClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8B7;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Projects" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnPaymentsClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8C7;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Payments" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnReviewsClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE734;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Reviews" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <Border Height="120" Background="Transparent" />
+
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnLogoutClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Width="21">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8AC;" Margin="0,0,15,0" FontSize="20"/>
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
+        </StackPanel>
+
+        <!-- Main Dashboard Content -->
+        <Grid Grid.Column="1" Background="White">
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Left Content -->
+                <StackPanel Grid.Column="0">
+                    <TextBlock x:Name="GreetingText" FontSize="26" FontWeight="Bold" Margin="0,0,0,20" FontFamily="Poppins" />
+
+                    <!-- Summary Cards -->
+                    <Grid Margin="0,0,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="69*" />
+                            <ColumnDefinition Width="59*" />
+                            <ColumnDefinition Width="128*" />
+                            <!-- Increased width for Card 3 -->
+                            <ColumnDefinition Width="64*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Card 1 -->
+                        <Border Grid.Column="0" Background="#FFF8E1" CornerRadius="15" Margin="10,10,112,10" Padding="20" BorderBrush="#F9D342" BorderThickness="1" Grid.ColumnSpan="2">
+                            <StackPanel>
+                                <Image Source="/Assets/team.png" Width="50" Height="50" HorizontalAlignment="Center"/>
+                                <TextBlock FontFamily="Poppins" Text="Total Customers" FontWeight="SemiBold" FontSize="12" Margin="0,10,0,5" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="txtTotalCustomers" FontFamily="Poppins" FontWeight="Bold" FontSize="20" Foreground="#333" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Card 2 -->
+                        <Border Grid.Column="1" Background="#FFEBE6" CornerRadius="15" Margin="20,10,236,10" Padding="20" BorderBrush="#FF9B85" BorderThickness="1" Grid.ColumnSpan="2">
+                            <StackPanel>
+                                <Image Source="/Assets/project.png" Width="50" Height="50" HorizontalAlignment="Center"/>
+                                <TextBlock FontFamily="Poppins" Text="Total Projects" FontWeight="SemiBold" FontSize="12" Margin="0,10,0,5" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="txtTotalProjects" FontFamily="Poppins" FontWeight="Bold" FontSize="20" Foreground="#333" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Card 3 (Increased width) -->
+                        <Border Grid.Column="2" Background="#E8F6EF" CornerRadius="15" Margin="32,10,10,10" Padding="20" BorderBrush="#6BCB77" BorderThickness="1">
+                            <StackPanel>
+                                <Image Source="/Assets/profits.png" Width="50" Height="50" HorizontalAlignment="Center"/>
+                                <TextBlock FontFamily="Poppins" Text="Total Income (LKR)" FontWeight="SemiBold" FontSize="12" Margin="0,10,0,5" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="txtTotalIncome" FontFamily="Poppins" FontWeight="Bold" FontSize="20" Foreground="#333" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Card 4 -->
+                        <Border Grid.Column="3" Background="#E6F0FF" CornerRadius="15" Margin="10,10,17,10" Padding="20" BorderBrush="#4D96FF" BorderThickness="1">
+                            <StackPanel>
+                                <Image Source="/Assets/rating.png" Width="50" Height="50" HorizontalAlignment="Center"/>
+                                <TextBlock FontFamily="Poppins" Text="Reviews" FontWeight="SemiBold" FontSize="12" Margin="0,10,0,5" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="txtPendingReviews" FontFamily="Poppins" FontWeight="Bold" FontSize="20" Foreground="#333" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+
+
+                    <!-- Chart Section -->
+                    <!-- Chart Section -->
+                    <Grid Height="357">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Monthly Income Chart -->
+                        <Border Background="White" Margin="10" Padding="10" CornerRadius="10" BorderBrush="#DDD" BorderThickness="1" Grid.Column="0">
+                            <StackPanel>
+                                <TextBlock Text="Monthly Income (Last 6 Months)" 
+                       FontWeight="Bold" Margin="0,0,0,10" 
+                       FontFamily="Poppins"/>
+                                <lvc:CartesianChart Height="280" Width="268"
+                                Series="{Binding IncomeSeriesCollection}">
+                                    <lvc:CartesianChart.AxisX>
+                                        <lvc:Axis Title="Months" Labels="{Binding IncomeLabels}" />
+                                    </lvc:CartesianChart.AxisX>
+                                    <lvc:CartesianChart.AxisY>
+                                        <lvc:Axis Title="Income (LKR)" LabelFormatter="{Binding Formatter}" />
+                                    </lvc:CartesianChart.AxisY>
+                                </lvc:CartesianChart>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Project Status Pie Chart -->
+                        <Border Background="White" Margin="10" Padding="10" CornerRadius="10" BorderBrush="#DDD" BorderThickness="1" Grid.Column="1">
+                            <StackPanel>
+                                <TextBlock Text="Project Status" FontWeight="Bold" Margin="0,0,0,10" FontFamily="Poppins"/>
+                                <lvc:PieChart Height="280" x:Name="ProjectPieChart"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+
+                <!-- Right Side Content -->
+                <Grid Grid.Column="1" Background="Transparent">
+                    <Grid Margin="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="78*" />
+                            <RowDefinition Height="77*" />
+                        </Grid.RowDefinitions>
+
+                        <!-- Calendar Section -->
+                        <Border Background="White" Margin="10,10,10,10" Padding="10" CornerRadius="10" BorderBrush="#DDD" BorderThickness="1" Grid.Row="0">
+                            <StackPanel>
+                                <TextBlock Text="Calendar" 
+                                   FontWeight="Bold" 
+                                   Margin="0,0,0,10" 
+                                   FontFamily="Poppins"
+                                   FontSize="16"
+                                   Foreground="#111827"/>
+
+                                <Calendar Width="200" Height="250"
+                                      BorderBrush="#E0E0E0" BorderThickness="1"
+                                      Background="#F9FAFB" Foreground="#111827"
+                                      FontFamily="Poppins">
+                                    <Calendar.Resources>
+                                        <!-- Style for normal dates -->
+                                        <Style TargetType="CalendarDayButton">
+                                            <Setter Property="Background" Value="Transparent"/>
+                                            <Setter Property="BorderBrush" Value="Transparent"/>
+                                            <Setter Property="Foreground" Value="#111827"/>
+                                            <Setter Property="FontSize" Value="12"/>
+                                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="CalendarDayButton">
+                                                        <Grid>
+                                                            <Ellipse x:Name="circle" 
+                                             Fill="Transparent" 
+                                             Width="30" Height="30" 
+                                             HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                        </Grid>
+                                                        <ControlTemplate.Triggers>
+                                                            <Trigger Property="IsToday" Value="True">
+                                                                <Setter TargetName="circle" Property="Fill" Value="#FACC15"/>
+                                                                <!-- Today's Date Yellow -->
+                                                                <Setter Property="Foreground" Value="Black"/>
+                                                            </Trigger>
+                                                            <Trigger Property="IsSelected" Value="True">
+                                                                <Setter TargetName="circle" Property="Fill" Value="#111827"/>
+                                                                <!-- Selected Date Dark -->
+                                                                <Setter Property="Foreground" Value="White"/>
+                                                            </Trigger>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter TargetName="circle" Property="Fill" Value="#E5E7EB"/>
+                                                                <!-- Hover Light Grey -->
+                                                            </Trigger>
+                                                            <Trigger Property="IsEnabled" Value="False">
+                                                                <Setter Property="Foreground" Value="#9CA3AF"/>
+                                                                <!-- Disabled Grey -->
+                                                            </Trigger>
+                                                        </ControlTemplate.Triggers>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </Calendar.Resources>
+                                </Calendar>
+                            </StackPanel>
+                        </Border>
+
+
+                        <Border Background="#FFF8E1" Margin="10,10,10,-18" Padding="20" CornerRadius="15" BorderBrush="#F9D342" BorderThickness="1" Grid.Row="1">
+                            <StackPanel x:Name="ReviewsStackPanel">
+                                <TextBlock Text="Recent Customer Reviews" FontWeight="Bold" Margin="0,0,0,10" FontFamily="Poppins" FontSize="16" Foreground="#F9D342"/>
+
+                                <!-- Display reviews dynamically -->
+                                <ItemsControl ItemsSource="{Binding RecentReviews}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Margin="5" Padding="10" CornerRadius="15" BorderBrush="{Binding BorderColor}" BorderThickness="1" Background="{Binding BackgroundColor}">
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding CustomerName}" FontWeight="Bold" FontSize="14" Foreground="{Binding BorderColor}"/>
+                                                    <TextBlock Text="{Binding Content}" FontSize="12" Foreground="#666"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

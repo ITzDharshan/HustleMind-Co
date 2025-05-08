@@ -1,0 +1,54 @@
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\HustleMind Co..exe
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\HustleMind Co..dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\HustleMind Co..deps.json
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\HustleMind Co..runtimeconfig.json
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\HustleMind Co..pdb
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Azure.Core.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Azure.Identity.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\LiveCharts.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\LiveCharts.Wpf.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Bcl.Cryptography.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Data.SqlClient.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Extensions.Options.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Extensions.Primitives.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Identity.Client.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.IdentityModel.Logging.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.IdentityModel.Protocols.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.IdentityModel.Tokens.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\Microsoft.SqlServer.Server.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\System.ClientModel.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\System.Configuration.ConfigurationManager.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\System.Diagnostics.EventLog.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\System.Memory.Data.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\System.Security.Cryptography.Pkcs.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\System.Security.Cryptography.ProtectedData.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
+C:\Users\PC\Documents\PublishedApps\HustleMindCo\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll

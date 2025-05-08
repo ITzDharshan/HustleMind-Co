@@ -1,0 +1,155 @@
+﻿<Window x:Class="HustleMind_Co_.ForgotWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Forgot Password"
+        Height="450"
+        Width="500"
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="#FF160078"
+        BorderBrush="White"
+        BorderThickness="5">
+
+    <Grid>
+
+        <!-- Close Button at Top Right -->
+        <Button Width="24"
+                Height="24"
+                Background="Transparent"
+                BorderThickness="0"
+                Click="Close_Click"
+                ToolTip="Close"
+                Cursor="Hand"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="0,10,10,0"
+                Padding="5">
+            <Path Data="M 2,2 L 10,10 M 10,2 L 2,10"
+                  Stroke="Red"
+                  StrokeThickness="2"
+                  Stretch="Uniform"/>
+        </Button>
+        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="356" Height="Auto">
+
+            <!-- Header Text -->
+            <TextBlock Text="Forgot Password"
+                       FontSize="34"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       Margin="0,5,0,15"
+                       HorizontalAlignment="Center"
+                       Height="55"
+                       RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-1.146"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.48"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+
+            <!-- Mobile Number Field -->
+            <TextBlock Text="Enter Mobile Number"
+                       Foreground="White"
+                       Height="27"/>
+            <TextBox x:Name="txtMobileNumber"
+                     Height="30"
+                     Margin="0,0,0,10"
+                     Padding="10,0,35,0"
+                     TextAlignment="Left"
+                     HorizontalContentAlignment="Left"
+                     VerticalContentAlignment="Center"
+                     FontWeight="Bold"/>
+
+            <!-- New Password Field -->
+            <TextBlock Text="New Password"
+                       Foreground="White"
+                       Height="27"/>
+            <Grid Margin="0,0,0,10">
+                <!-- Hidden Password -->
+                <PasswordBox x:Name="txtNewPassword"
+                             Height="30"
+                             VerticalContentAlignment="Center"
+                             HorizontalContentAlignment="Left"
+                             Padding="10,0,35,0"
+                             Visibility="Visible"
+                             FontWeight="Bold"/>
+
+                <!-- Visible Password -->
+                <TextBox x:Name="txtVisibleNewPassword"
+                         Height="30"
+                         VerticalContentAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         TextAlignment="Left"
+                         Padding="10,0,35,0"
+                         Visibility="Collapsed"
+                         FontWeight="Bold"/>
+
+                <!-- Toggle Button -->
+                <Button x:Name="btnToggleNewPassword"
+                        Content="👁"
+                        Width="30"
+                        Height="30"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Background="Transparent"
+                        BorderBrush="{x:Null}"
+                        Click="btnToggleNewPassword_Click"/>
+            </Grid>
+
+            <!-- Confirm Password Field -->
+            <TextBlock Text="Confirm Password"
+                       Foreground="White"
+                       Height="27"/>
+            <Grid Margin="0,0,0,10">
+                <!-- Hidden Password -->
+                <PasswordBox x:Name="txtConfirmPassword"
+                             Height="30"
+                             VerticalContentAlignment="Center"
+                             HorizontalContentAlignment="Left"
+                             Padding="10,0,35,0"
+                             Visibility="Visible"
+                             FontWeight="Bold"/>
+
+                <!-- Visible Password -->
+                <TextBox x:Name="txtVisibleConfirmPassword"
+                         Height="30"
+                         VerticalContentAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         TextAlignment="Left"
+                         Padding="10,0,35,0"
+                         Visibility="Collapsed"
+                         FontWeight="Bold"/>
+
+                <!-- Toggle Button -->
+                <Button x:Name="btnToggleConfirmPassword"
+                        Content="👁"
+                        Width="30"
+                        Height="30"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Background="Transparent"
+                        BorderBrush="{x:Null}"
+                        Click="btnToggleConfirmPassword_Click"/>
+            </Grid>
+
+            <!-- Submit Button -->
+            <Button Content="Submit"
+                    Height="35"
+                    Margin="0,10,0,10"
+                    Click="Submit_Click"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    Foreground="White"
+                    Background="#FF7226FF"
+                    BorderBrush="#FF7226FF"
+                    BorderThickness="1.5"/>
+        </StackPanel>
+    </Grid>
+</Window>

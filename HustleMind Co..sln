@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HustleMind Co.", "HustleMind Co\HustleMind Co..csproj", "{2DDB1948-FC9A-4524-95F8-AED047AE7ABE}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "HustleMindInstaller", "HustleMindInstaller\HustleMindInstaller.vdproj", "{B4C2E0E2-2D11-6A0C-2E49-3FE39BC233B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBScriptRunner", "DBScriptRunner\DBScriptRunner.csproj", "{959A3A2C-5BCD-442E-9022-4F4A48AEFF54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DDB1948-FC9A-4524-95F8-AED047AE7ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDB1948-FC9A-4524-95F8-AED047AE7ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDB1948-FC9A-4524-95F8-AED047AE7ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDB1948-FC9A-4524-95F8-AED047AE7ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C2E0E2-2D11-6A0C-2E49-3FE39BC233B3}.Debug|Any CPU.ActiveCfg = Debug
+		{B4C2E0E2-2D11-6A0C-2E49-3FE39BC233B3}.Release|Any CPU.ActiveCfg = Release
+		{959A3A2C-5BCD-442E-9022-4F4A48AEFF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{959A3A2C-5BCD-442E-9022-4F4A48AEFF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{959A3A2C-5BCD-442E-9022-4F4A48AEFF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{959A3A2C-5BCD-442E-9022-4F4A48AEFF54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDC18F3F-9ED2-461E-8324-5BC021E32FD1}
+	EndGlobalSection
+EndGlobal

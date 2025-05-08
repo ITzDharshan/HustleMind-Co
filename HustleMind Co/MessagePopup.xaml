@@ -1,0 +1,46 @@
+﻿<Window x:Class="HustleMind_Co_.MessagePopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Message" Height="300" Width="400"
+        WindowStartupLocation="CenterScreen" ShowInTaskbar="False"
+        ResizeMode="NoResize" WindowStyle="None" 
+        Background="Transparent" AllowsTransparency="True">
+    <Grid>
+        <Border x:Name="MainBorder" Background="White" BorderBrush="#FF160078" BorderThickness="5" CornerRadius="20" Padding="10">
+            <Grid>
+                <Border Background="White" CornerRadius="20" Padding="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Larger Centered Icon -->
+                        <Image x:Name="messageIcon" Grid.Row="0" Width="140" Height="140"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Source="pack://application:,,,/Assets/Ok-amico.png" />
+
+                        <!-- Smaller Text Section -->
+                        <TextBlock x:Name="MessageText" Grid.Row="1" TextAlignment="Center"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Margin="20,0,20,0" FontSize="16"
+                                   TextWrapping="Wrap" FontWeight="Bold"/>
+
+                        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="okButton" Content="OK" Width="100" Height="35" Margin="0,10,5,10"
+                                Click="OnOkButtonClick" Background="#FF160078"
+                                Foreground="White" BorderBrush="#FF160078" BorderThickness="2"
+                                FontWeight="Bold"/>
+                            <Button x:Name="cancelButton" Content="Cancel" Width="100" Height="35" Margin="5,10,0,10"
+                                Click="OnCancelButtonClick" Background="Gray"
+                                Foreground="White" BorderBrush="Gray" BorderThickness="2"
+                                FontWeight="Bold" Visibility="Collapsed"/>
+                        </StackPanel>
+
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

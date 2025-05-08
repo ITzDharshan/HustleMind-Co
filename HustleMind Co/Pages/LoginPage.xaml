@@ -1,0 +1,212 @@
+﻿<Page x:Class="HustleMind_Co_.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HustleMind_Co_.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="HustleMind Co">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF7226FF"/>
+                <GradientStop Color="#FF010030" Offset="1"/>
+                <GradientStop Color="#FF160078" Offset="0.65"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- Create two columns: One for the form, one for the image -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" MinWidth="600" />
+        </Grid.ColumnDefinitions>
+
+
+        <!-- Content Container (Form) -->
+        <Border CornerRadius="15"
+                Padding="0"
+                Width="404"
+                Height="511"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Background="Transparent" 
+                Grid.Column="1">
+            <Grid Margin="0,-30,0,0">
+                <StackPanel Margin="30">
+
+                    <!-- Company Heading -->
+                    <StackPanel Margin="0,0,0,20" Height="137">
+                        <TextBlock Text="Welcome to"
+                                   FontSize="35"
+                                   FontWeight="SemiBold"
+                                   Foreground="#DADADA"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="HustleMind Co."
+                                   FontSize="43"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,-5,0,5"/>
+                        <TextBlock Text="Login to continue your journey"
+                                   FontSize="24"
+                                   Foreground="#CCCCCC"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Username Field -->
+                    <TextBlock Text="Username" Margin="0,5,0,5" Foreground="white"/>
+                    <TextBox x:Name="txtUsername"
+                         Height="30"
+                         Margin="0,0,0,10"
+                         Padding="10,0,35,0"
+                         TextAlignment="Left"
+                         HorizontalContentAlignment="Left"
+                         VerticalContentAlignment="Center" FontWeight="Bold"/>
+
+                    <!-- Password Field -->
+                    <TextBlock Text="Password" Margin="0,5,0,5" Foreground="white"/>
+
+                    <Grid Margin="0,0,0,20">
+                        <!-- Hidden PasswordBox -->
+                        <PasswordBox x:Name="txtPassword"
+                             Height="30"
+                             VerticalContentAlignment="Center"
+                             HorizontalContentAlignment="Left"
+                             Padding="10,0,35,0"
+                             Visibility="Visible" FontWeight="Bold"/>
+
+                        <!-- Visible TextBox for showing password -->
+                        <TextBox x:Name="txtVisiblePassword"
+                             Height="30"
+                             VerticalContentAlignment="Center"
+                             HorizontalContentAlignment="Left"
+                             TextAlignment="Left"
+                             Padding="10,0,35,0"
+                             Visibility="Collapsed"/>
+
+                        <!-- Show/Hide Icon Button -->
+                        <Button x:Name="btnTogglePassword"
+                            Content="👁"
+                            Width="30"
+                            Height="30"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderBrush="{x:Null}"
+                            Click="btnTogglePassword_Click"/>
+                    </Grid>
+
+                    <!-- Forgot Password Link -->
+                    <TextBlock Text="Forgot Password?"
+                         HorizontalAlignment="Right"
+                         Foreground="white"
+                         Margin="0,0,10,10"
+                         FontSize="14"
+                         Cursor="Hand"
+                         MouseDown="ForgotPassword_Click"/>
+
+                    <!-- Login Button -->
+                    <Button Content="Login"
+                            Height="35"
+                            Click="Login_Click"
+                            FontWeight="Bold"
+                            FontSize="16"
+                            Foreground="White"
+                            Cursor="Hand"
+                            Background="Transparent"
+                            BorderBrush="#FF7226FF"
+                            BorderThickness="1.5"
+                            Margin="0,0,0,20">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                                    CornerRadius="8" 
+                                                    Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" 
+                                                                  VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="6" Color="#7226FF" Opacity="0.3"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF7226FF"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <!-- Signup Prompt -->
+                    <TextBlock Text="Don't have an account?" 
+                               Margin="0,25,0,5" 
+                               HorizontalAlignment="Center" 
+                               Foreground="#DADADA"
+                               FontSize="13"/>
+
+                    <!-- Register Button -->
+                    <Button Content="Register"
+                            Height="35"
+                            Width="340"
+                            Click="GoToRegister_Click"
+                            FontWeight="Bold"
+                            FontSize="16"
+                            Foreground="White"
+                            Cursor="Hand"
+                            Background="Transparent"
+                            BorderBrush="#FF7226FF"
+                            BorderThickness="1.5"
+                            Margin="0,0,0,20">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            CornerRadius="8" 
+                            Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect ShadowDepth="0" BlurRadius="6" Color="#7226FF" Opacity="0.3"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF7226FF"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Image Section -->
+        <Image Source="/Assets/Good team-pana.png" 
+               Stretch="Fill" 
+               HorizontalAlignment="Center" 
+               Width="432" 
+               Margin="0,117,0,117"/>
+    </Grid>
+</Page>

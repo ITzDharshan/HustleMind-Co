@@ -1,0 +1,92 @@
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\HustleMind Co..exe
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\HustleMind Co..deps.json
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\HustleMind Co..runtimeconfig.json
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\HustleMind Co..dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\HustleMind Co..pdb
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Azure.Core.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Azure.Identity.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\LiveCharts.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\LiveCharts.Wpf.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Identity.Client.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\System.ClientModel.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\System.Memory.Data.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\bin\Release\net9.0-windows\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co..csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\ForgotWindow.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\MainWindow.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\MessagePopup.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\CustomerPage.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\DashboardPage.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\PaymentPage.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\ProjectPage.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\ReviewPage.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\ForgotWindow.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\MainWindow.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\MessagePopup.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\CustomerPage.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\DashboardPage.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\LoginPage.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\PaymentPage.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\ProjectPage.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\RegisterPage.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\ReviewPage.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\UserControls\SuccessPopup.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\App.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co._Content.g.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co._MarkupCompile.cache
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co._MarkupCompile.lref
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\LoginPage.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\Pages\RegisterPage.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\UserControls\SuccessPopup.baml
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co..g.resources
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co..GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co..AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co..AssemblyInfo.cs
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co..csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMi.4912062D.Up2Date
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co..dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\refint\HustleMind Co..dll
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co..pdb
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\HustleMind Co..genruntimeconfig.cache
+C:\Users\PC\source\repos\HustleMind Co\HustleMind Co\obj\Release\net9.0-windows\ref\HustleMind Co..dll

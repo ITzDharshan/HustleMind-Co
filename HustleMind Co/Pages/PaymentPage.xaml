@@ -1,0 +1,386 @@
+﻿<Page x:Class="HustleMind_Co_.Pages.PaymentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="PaymentPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Menu Panel -->
+        <StackPanel Grid.Column="0">
+            <StackPanel.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#FF7226FF" Offset="0"/>
+                    <GradientStop Color="#FF160078" Offset="0.65"/>
+                    <GradientStop Color="#FF010030" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+            <!-- Logo -->
+            <Image Height="120" Width="120" Source="/Assets/jet.png" Margin="0,20,0,10" HorizontalAlignment="Center"/>
+
+            <!-- Menu Items -->
+            <ListBox Background="Transparent" BorderThickness="0" Margin="0,30,0,0"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                 Foreground="White" FontSize="16"
+                 FontFamily="Poppins"
+                    SelectedItem="{Binding SelectedMenuItem}" 
+                 SelectionMode="Single">
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnDashboardClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Dashboard" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnCustomersClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE77B;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Customers" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnProjectsClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8B7;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Projects" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnPaymentsClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8C7;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Payments" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnReviewsClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE734;" Margin="0,0,15,0" FontSize="20"/>
+                        <TextBlock Text="Reviews" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <Border Height="120" Background="Transparent" />
+
+                <ListBoxItem Padding="15" Cursor="Hand" MouseLeftButtonUp="OnLogoutClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Width="21">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8AC;" Margin="0,0,15,0" FontSize="20"/>
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
+        </StackPanel>
+
+        <ScrollViewer Grid.Column="1" Padding="20" VerticalScrollBarVisibility="Auto" Background="White">
+            <StackPanel>
+                <!-- Title -->
+                <TextBlock Text="Payment Information" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" FontFamily="Poppins" Foreground="#333"/>
+
+                <!-- Form for New Payment Entry -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Width="588" HorizontalAlignment="Left" Margin="32,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <!-- Added for file name display -->
+                            <RowDefinition Height="Auto"/>
+                            <!-- Added for buttons -->
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Payment ID -->
+                        <TextBlock Text="Project ID:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <TextBox x:Name="txtProjectId" Grid.Row="0" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+
+                        <TextBlock Text="Payment Type:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <ComboBox x:Name="cmbPaymentType" Grid.Row="1" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14">
+                            <ComboBoxItem Content="Advance Payment"/>
+                            <ComboBoxItem Content="Balance Payment"/>
+                            <ComboBoxItem Content="Full Payment"/>
+                        </ComboBox>
+                        
+                        <!-- Amount -->
+                        <TextBlock Text="Amount:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <TextBox x:Name="txtAmount" Grid.Row="2" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+
+                        <!-- Payment Date -->
+                        <TextBlock Text="Payment Date:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <DatePicker x:Name="dpPaymentDate" Grid.Row="3" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+
+                        <!-- Payment Status -->
+                        <TextBlock Text="Payment Status:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <ComboBox x:Name="cmbPaymentStatus" Grid.Row="4" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14">
+                            <ComboBoxItem Content="Paid"/>
+                            <ComboBoxItem Content="Pending"/>
+                        </ComboBox>
+
+                        <TextBlock Text="Payment Method:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <ComboBox x:Name="cmbPaymentMethod" Grid.Row="5" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14">
+                            <ComboBoxItem Content="Online"/>
+                            <ComboBoxItem Content="ATM"/>
+                            <ComboBoxItem Content="Cash"/>
+                        </ComboBox>
+
+                        <!-- File Attachment -->
+                        <TextBlock Text="Attach File:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="0,10" FontFamily="Poppins" FontWeight="SemiBold" FontSize="14"/>
+                        <Button Content="Browse" Grid.Row="6" Grid.Column="1" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" Click="BrowseFile_Click"/>
+
+                        <!-- Display file name -->
+                        <TextBlock x:Name="txtFileName" Grid.Row="7" Grid.Column="1" Margin="0,10" Padding="10"/>
+
+                        <!-- Store File Path -->
+                        <TextBox x:Name="txtFilePath" Grid.Row="8" Grid.Column="0" Margin="0,10" Padding="10" BorderBrush="#DDD" BorderThickness="1" IsReadOnly="True" Visibility="Collapsed"/>
+
+                        <!-- Buttons -->
+                        <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" Margin="0,20,0,0">
+                            <Button Content="Add Payment" Width="150" Height="35" Margin="0,0,20,0" 
+                                Background="#4A90E2" Foreground="White" FontFamily="Poppins" 
+                                BorderBrush="#357ABD" Click="AddPayment_Click"/>
+
+                                                <Button Content="Save Changes" Width="150" Height="35"
+                                Background="#E74C3C" Foreground="White" FontFamily="Poppins" 
+                                BorderBrush="#C0392B" Click="SaveChanges_Click"/>
+                        </StackPanel>
+                    </Grid>
+
+
+
+                    <!-- Side Image -->
+                    <Image Source="/Assets/Selecting team-amico.png" Width="300" Margin="20,0,0,0" Stretch="Uniform" Grid.Column="1"/>
+                </Grid>
+
+                <!-- Payment Table Title -->
+                <TextBlock Text="Payments List" FontSize="24" FontWeight="Bold" Margin="0,20,0,20" FontFamily="Poppins" Foreground="#333"/>
+
+                <Border Background="White" 
+                    CornerRadius="12" 
+                    BorderBrush="#E5E7EB" 
+                    BorderThickness="1" 
+                    Padding="20"
+                    Margin="20"
+                    SnapsToDevicePixels="True">
+
+                    <DataGrid x:Name="PaymentDataGrid" 
+                          AutoGenerateColumns="False"
+                          HeadersVisibility="Column"
+                          CanUserAddRows="False"
+                          IsReadOnly="True"
+                          AlternatingRowBackground="#FAFAFA"
+                          GridLinesVisibility="None"
+                          RowHeight="60"
+                          ColumnHeaderHeight="50"
+                          FontFamily="Poppins"
+                          FontSize="14"
+                          BorderThickness="0"
+                          Background="White"
+                          Foreground="#374151"
+                          HorizontalGridLinesBrush="#E5E7EB"
+                          VerticalGridLinesBrush="#E5E7EB">
+
+                        <!-- Column header style -->
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#F9FAFB"/>
+                                <Setter Property="Foreground" Value="#111827"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontSize" Value="16"/>
+                                <Setter Property="BorderBrush" Value="#E5E7EB"/>
+                                <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                <Setter Property="Padding" Value="10,0"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+
+                        <!-- Cell Style (Inside Data) -->
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Foreground" Value="#111827"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="Padding" Value="10,0"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGrid.CellStyle>
+
+                        <!-- Columns -->
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Payment ID" Binding="{Binding PaymentId}" Width="120">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Header="Project ID" Binding="{Binding ProjectId}" Width="120">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Header="Payment Type" Binding="{Binding PaymentType}" Width="160">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="150">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Header="Payment Date" Binding="{Binding PaymentDate, StringFormat='{}{0:yyyy-MM-dd}'}" Width="200">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTemplateColumn Header="Status" Width="200">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Border CornerRadius="12" 
+                                                Padding="6,3" 
+                                                MinWidth="90"
+                                                HorizontalAlignment="Left" 
+                                                VerticalAlignment="Center">
+                                            <Border.Style>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="Background" Value="Gray"/>
+                                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                                    <Setter Property="BorderThickness" Value="1"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding PaymentStatus}" Value="Paid">
+                                                            <Setter Property="Background" Value="#A5D6A7"/>
+                                                            <Setter Property="BorderBrush" Value="#43A047"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding PaymentStatus}" Value="Pending">
+                                                            <Setter Property="Background" Value="#FFCCCB"/>
+                                                            <Setter Property="BorderBrush" Value="#F44336"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Border.Style>
+                                            <TextBlock Text="{Binding PaymentStatus}" 
+                                                   Foreground="Black" 
+                                                   FontWeight="SemiBold" 
+                                                   FontSize="12"
+                                                   HorizontalAlignment="Center" 
+                                                   VerticalAlignment="Center"/>
+                                        </Border>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+
+                            <DataGridTextColumn Header="Payment Method" Binding="{Binding PaymentMethod}" Width="160">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="5,0,0,0"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                            <DataGridTemplateColumn Header="File Path" Width="250">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <TextBlock Text="{Binding FilePath}" 
+                                                TextWrapping="Wrap"
+                                                TextTrimming="CharacterEllipsis"
+                                                FontFamily="Poppins"
+                                                FontSize="14" 
+                                                Foreground="#111827"
+                                                Padding="5,0"
+                                                Height="40" 
+                                                LineStackingStrategy="BlockLineHeight"
+                                                LineHeight="20"
+                                                TextAlignment="Left" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <!-- Download button -->
+                            <DataGridTemplateColumn Header="Download" Width="100">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                <Button Width="32" Height="32" Margin="4" Background="#EFF6FF" BorderBrush="#3B82F6" BorderThickness="1"
+                                                        Click="DownloadButton_Click" ToolTip="Download">
+                                                    <Image Source="/Assets/cloud-computing.png" Width="16" Height="16"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+
+                            <!-- Action buttons -->
+                            <DataGridTemplateColumn Header="Actions" Width="120">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                <Button Width="32" Height="32" Margin="4" Background="#ECFDF5" BorderBrush="#34D399" BorderThickness="1" 
+                                                        Click="EditButton_Click" ToolTip="Edit">
+                                                    <Image Source="/Assets/pencil.png" Width="16" Height="16"/>
+                                                </Button>
+
+                                                <Button Width="32" Height="32" Margin="4" Background="#FEF2F2" BorderBrush="#F87171" BorderThickness="1"
+                                                        Click="DeleteButton_Click" ToolTip="Delete">
+                                                    <Image Source="/Assets/bin.png" Width="16" Height="16"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

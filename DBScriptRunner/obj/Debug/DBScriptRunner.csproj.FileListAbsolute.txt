@@ -1,0 +1,7 @@
+C:\Users\PC\source\repos\HustleMind Co\DBScriptRunner\bin\Debug\DBScriptRunner.exe.config
+C:\Users\PC\source\repos\HustleMind Co\DBScriptRunner\bin\Debug\DBScriptRunner.exe
+C:\Users\PC\source\repos\HustleMind Co\DBScriptRunner\bin\Debug\DBScriptRunner.pdb
+C:\Users\PC\source\repos\HustleMind Co\DBScriptRunner\obj\Debug\DBScriptRunner.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\HustleMind Co\DBScriptRunner\obj\Debug\DBScriptRunner.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\HustleMind Co\DBScriptRunner\obj\Debug\DBScriptRunner.exe
+C:\Users\PC\source\repos\HustleMind Co\DBScriptRunner\obj\Debug\DBScriptRunner.pdb
