@@ -38,10 +38,8 @@ Welcome to **HustleMind Co.**, a custom-built freelancing service platform desig
 
 ## 📸 Screenshots
 
-![image](https://github.com/user-attachments/assets/d3fb6d07-685d-4a9b-92ba-b0bac0d750db)
-![image](https://github.com/user-attachments/assets/43bcf7a1-7cc2-4349-886c-40fdc5a02f29)
-![image](https://github.com/user-attachments/assets/26ddea61-dc78-4637-aa06-9728874521bd)
-
+![image](https://github.com/user-attachments/assets/aa801b79-f8fa-4691-9e28-c11c8a82c0e6)
+![image](https://github.com/user-attachments/assets/e9b173d3-dcf8-434f-898e-e07fa6b7179b)
 
 ---
 
